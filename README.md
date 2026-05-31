@@ -1,7 +1,7 @@
 # Your AI-Powered Second Brain
 ## A Step-by-Step Guide to Building a Claude + Obsidian Life OS
 
-*Version 1.0 — May 2026*
+*Version 1.0 — May 2026 | [Windows version →](README-Windows.md)*
 
 ---
 
