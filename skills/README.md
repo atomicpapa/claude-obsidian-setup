@@ -1,35 +1,65 @@
 # Example Skills
 
-These are ready-to-use skill files for Claude Code. Copy any of them to `~/.claude/skills/` (Mac) or `%USERPROFILE%\.claude\skills\` (Windows) to install them.
+These are ready-to-use skills for Claude Code. Each skill is a folder containing a `SKILL.md` instruction file — this is the format Claude Code expects.
 
-Skills have no file extension — the filename is the slash command. For example, the `journal` file becomes `/journal` inside Claude Code.
+Copy any skill folder to `~/.claude/skills/` (Mac) or `%USERPROFILE%\.claude\skills\` (Windows) to install it. The folder name becomes the slash command. For example, the `journal/` folder becomes `/journal` inside Claude Code.
 
 ## Included Skills
 
 | Skill | Command | What It Does |
 |---|---|---|
-| `morning-briefing` | `/morning-briefing` | Daily briefing: calendar, tasks, weather, recent notes |
-| `journal` | `/journal` | Guided journal entry saved to your vault |
-| `braindump` | `/braindump` | Brain-emptying session that captures tasks, ideas, and insights |
-| `weekly-checkin` | `/weekly-checkin` | Weekly reflection and synthesis note |
+| `morning-briefing/` | `/morning-briefing` | Daily briefing: calendar, tasks, weather, and news tailored to your interests |
+| `journal/` | `/journal` | Guided journal entry — draws out reflection through conversation, then writes a structured note |
+| `braindump/` | `/braindump` | Empties your brain — captures everything, classifies into tasks/ideas/concerns/insights, creates tasks automatically |
+| `weekly-checkin/` | `/weekly-checkin` | Weekly reflection — synthesizes your vault notes, identifies patterns, sets intentions for next week |
 
 ## Installation
 
 **Mac:**
 ```bash
-cp skills/* ~/.claude/skills/
+cp -r skills/morning-briefing ~/.claude/skills/
+cp -r skills/journal ~/.claude/skills/
+cp -r skills/braindump ~/.claude/skills/
+cp -r skills/weekly-checkin ~/.claude/skills/
+```
+
+Or copy all at once:
+```bash
+cp -r skills/* ~/.claude/skills/
 ```
 
 **Windows (PowerShell):**
 ```powershell
-Copy-Item skills\* "$env:USERPROFILE\.claude\skills\"
+Copy-Item -Recurse skills\morning-briefing "$env:USERPROFILE\.claude\skills\"
+Copy-Item -Recurse skills\journal "$env:USERPROFILE\.claude\skills\"
+Copy-Item -Recurse skills\braindump "$env:USERPROFILE\.claude\skills\"
+Copy-Item -Recurse skills\weekly-checkin "$env:USERPROFILE\.claude\skills\"
 ```
 
 ## Customizing
 
-Each skill file is plain Markdown — open it in any text editor and adjust:
-- Replace `[YOUR CITY]` with your actual city in `morning-briefing`
-- Change folder paths if your vault structure differs from the guide
-- Adjust the tone, format, or steps to match your preferences
+Each `SKILL.md` is plain Markdown — open it in any text editor and adjust:
+
+- **morning-briefing:** Set your city, timezone, and news topics
+- **journal/braindump/weekly-checkin:** Update folder paths if your vault structure differs from the guide
+- **All skills:** Adjust tone, output format, or steps to match your preferences
+
+Skills read from `~/Documents/vault/Reference/COGsetup/MY-PROFILE.md` when available — creating this file with your name, city, timezone, active projects, and interests unlocks personalization across all skills. See the main guide for details.
+
+## User Profile
+
+Skills become more powerful when you create a user profile. Create `~/Documents/vault/Reference/COGsetup/MY-PROFILE.md` with content like:
+
+```markdown
+# My Profile
+
+- **Name:** [Your name]
+- **City:** [Your city]
+- **Timezone:** [e.g., America/Chicago]
+- **Occupation:** [Your role]
+- **Active projects:** [Project 1], [Project 2]
+- **News interests:** [Topic 1], [Topic 2], [Topic 3]
+- **Task manager:** [Things 3 / Todoist / etc.]
+```
 
 The best skills are ones you've tuned to your own habits. Use these as a starting point.
