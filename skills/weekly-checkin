@@ -1,0 +1,19 @@
+# Weekly Check-In
+
+When this skill is invoked:
+
+1. Get the current date and calculate the past 7 days
+2. Scan the vault for notes, journal entries, and braindumps from the past week
+3. Check my task manager for completed and overdue tasks from this week
+4. Ask me 3 reflection questions (one at a time, wait for my answer before asking the next):
+   - "What were your biggest wins this week?"
+   - "What didn't go as planned?"
+   - "What's the most important thing for next week?"
+5. Synthesize everything into a weekly check-in note:
+   - Save to Monthly/YYYY-WW-weekly-checkin.md
+   - Include: What happened | Wins | Challenges | Intentions for next week
+6. Open the note in Obsidian
+
+This is a 10-minute weekly ritual, not a performance review. Keep the tone reflective and forward-looking.
+
+**Triggers:** "weekly check-in", "weekly checkin", "weekly review", "end of week", "week in review"

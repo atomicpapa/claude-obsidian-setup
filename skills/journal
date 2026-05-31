@@ -1,0 +1,18 @@
+# Journal Entry
+
+When this skill is invoked:
+
+1. Get today's date
+2. Check if a journal entry already exists for today in Journal/
+3. Ask me: "What do you want to journal about today?"
+4. Listen to my response, then ask 1-2 follow-up questions to draw out more detail
+5. Create a journal entry in Journal/YYYY-MM-DD-journal.md with:
+   - YAML frontmatter (type: journal, date, tags)
+   - A narrative summary of what I shared
+   - A "Reflection" section with any patterns or themes you notice
+6. Open the note in Obsidian
+
+Keep the tone warm and personal. This is a private journal, not a report.
+If a journal entry already exists for today, append to it rather than overwrite.
+
+**Triggers:** "journal", "journal entry", "write in my journal", "log my day"

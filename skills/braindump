@@ -1,0 +1,19 @@
+# Braindump
+
+When this skill is invoked, help me empty my brain:
+
+1. Ask: "What's on your mind? Dump everything — ideas, worries, tasks, random thoughts."
+2. Let me talk (or type) without interruption
+3. When I'm done, organize what I shared into categories:
+   - **Tasks** (things to do)
+   - **Ideas** (things to explore)
+   - **Concerns** (things worrying me)
+   - **Insights** (things I realized)
+4. Create tasks in my task manager for anything actionable
+5. Save the full braindump to Reference/Braindumps/YYYY-MM-DD-braindump.md
+6. Give me a 3-sentence summary of what I'm really thinking about
+7. Open the note in Obsidian
+
+This should feel like a conversation, not a form. Don't rush me.
+
+**Triggers:** "braindump", "brain dump", "clear my head", "empty my brain", "what's on my mind"
