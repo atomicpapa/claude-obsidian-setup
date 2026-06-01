@@ -12,28 +12,20 @@ Copy any skill folder to `~/.claude/skills/` (Mac) or `%USERPROFILE%\.claude\ski
 | `journal/` | `/journal` | Guided journal entry — draws out reflection through conversation, then writes a structured note |
 | `braindump/` | `/braindump` | Empties your brain — captures everything, classifies into tasks/ideas/concerns/insights, creates tasks automatically |
 | `weekly-checkin/` | `/weekly-checkin` | Weekly reflection — synthesizes your vault notes, identifies patterns, sets intentions for next week |
+| `wiki-create/` | `/wiki-create` | Scaffold a new LLM-maintained wiki domain with full folder structure, schema, index, log, and timeline |
+| `wiki-ingest/` | `/wiki-ingest` | Ingest a source note into a wiki — proposes pages to create/update, writes after approval, maintains index and log |
+| `wiki-lint/` | `/wiki-lint` | Audit a wiki for broken links, orphan pages, ghost index entries, unresolved flags, and frontmatter gaps |
 
 ## Installation
 
 **Mac:**
-```bash
-cp -r skills/morning-briefing ~/.claude/skills/
-cp -r skills/journal ~/.claude/skills/
-cp -r skills/braindump ~/.claude/skills/
-cp -r skills/weekly-checkin ~/.claude/skills/
-```
-
-Or copy all at once:
 ```bash
 cp -r skills/* ~/.claude/skills/
 ```
 
 **Windows (PowerShell):**
 ```powershell
-Copy-Item -Recurse skills\morning-briefing "$env:USERPROFILE\.claude\skills\"
-Copy-Item -Recurse skills\journal "$env:USERPROFILE\.claude\skills\"
-Copy-Item -Recurse skills\braindump "$env:USERPROFILE\.claude\skills\"
-Copy-Item -Recurse skills\weekly-checkin "$env:USERPROFILE\.claude\skills\"
+Copy-Item -Recurse skills\* "$env:USERPROFILE\.claude\skills\"
 ```
 
 ## Customizing
@@ -42,6 +34,7 @@ Each `SKILL.md` is plain Markdown — open it in any text editor and adjust:
 
 - **morning-briefing:** Set your city, timezone, and news topics
 - **journal/braindump/weekly-checkin:** Update folder paths if your vault structure differs from the guide
+- **wiki-create/wiki-ingest/wiki-lint:** These work with any wiki domain — no customization needed to get started
 - **All skills:** Adjust tone, output format, or steps to match your preferences
 
 Skills read from `~/Documents/vault/Reference/COGsetup/MY-PROFILE.md` when available — creating this file with your name, city, timezone, active projects, and interests unlocks personalization across all skills. See the main guide for details.
