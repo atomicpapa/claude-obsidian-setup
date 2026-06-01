@@ -52,25 +52,33 @@ Skills live in `~/.claude/skills/` and are invoked with a slash command like `/m
 
 One of the most powerful patterns in this system is the **LLM-maintained wiki** — a structured layer of synthesized knowledge that the AI builds and maintains from your raw notes.
 
-The idea, inspired by [Andrej Karpathy's writing on personal knowledge systems](<!-- TODO: add link when found -->), is a three-layer architecture:
+The idea, drawn from [Andrej Karpathy's gist on using LLMs as a personal knowledge layer](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f), is a three-layer architecture:
 
 - **Raw sources (human-owned, immutable)** — your dated notes, journal entries, transcripts, clippings. The AI reads these but never modifies them.
 - **Wiki (AI-maintained)** — a `Wiki/<domain>/` folder for each topic you care about. Entity pages, timeline, index, and an append-only log. The AI creates and maintains these pages by ingesting your raw notes.
 - **Schema** — your `CLAUDE.md` files that define the conventions the AI follows.
 
-You might have a `Wiki/Health/` folder that synthesizes your medical notes into pages for each provider, condition, and medication — updated every time you ingest a new appointment note. Or a `Wiki/NorthbridgeChronicles/` that maintains character sheets and world-building lore for a fiction project. The wiki grows smarter every time you add a source.
+You might have a `Wiki/Health/` folder that synthesizes your medical notes into pages for each provider, condition, and medication — updated every time you ingest a new appointment note. Or a `Wiki/Projects/` that maintains decisions, components, and open threads for an ongoing project. The wiki grows smarter every time you add a source.
 
 The three wiki skills (`/wiki-create`, `/wiki-ingest`, `/wiki-lint`) handle the full lifecycle: scaffolding a new domain, ingesting source notes with approval-gated page creation, and auditing for broken links and structural gaps.
 
 ---
 
-## Inspiration
+## Where This Came From
 
-This system draws on two key sources:
+This system is a synthesis of three ideas that each clicked into place separately.
 
-- **The COG framework** — the core structure of connecting Claude Code to an Obsidian vault using CLAUDE.md, MCP servers, and skills was inspired by [<!-- TODO: add GitHub repo link when found -->]. COG stands for **C**ognition + **O**bsidian + **G**it.
+### 1. The Vault Structure — Steph Ango
 
-- **The LLM wiki pattern** — the three-layer wiki architecture (raw sources → AI-maintained wiki → schema) was inspired by [Andrej Karpathy's writing on using LLMs as a knowledge layer](<!-- TODO: add article link when found -->).
+The folder structure and file conventions used throughout this guide are based on [Steph Ango's vault design](https://stephango.com/vault). Ango is the CEO of Obsidian, and his approach — plain files, dated notes, minimal hierarchy, no proprietary formats — is the philosophical foundation the rest of this system builds on. The principle: your notes should be readable without Obsidian, portable to any tool, and still legible decades from now.
+
+### 2. The COG Framework — huytieu
+
+The idea of connecting Claude Code to an Obsidian vault using `CLAUDE.md`, MCP servers, and skills came from [huytieu's COG second-brain repo](https://github.com/huytieu/COG-second-brain). COG stands for **C**ognition + **O**bsidian + **G**it. The repo demonstrated how to turn Claude Code from a general-purpose coding assistant into a personalized life OS — the vault's folder structure from Steph Ango was preserved and layered on top.
+
+### 3. The Wiki Layer — Andrej Karpathy
+
+The LLM-maintained wiki pattern was inspired by [Andrej Karpathy's gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f), which describes using LLMs as a synthesis layer over raw personal notes. The core insight: raw notes are human-owned and immutable, while a separate AI-maintained wiki layer synthesizes them into structured, evergreen knowledge. This was adapted and built into the vault as the `Wiki/` folder structure, with the three wiki skills (`/wiki-create`, `/wiki-ingest`, `/wiki-lint`) handling the full lifecycle.
 
 ---
 
