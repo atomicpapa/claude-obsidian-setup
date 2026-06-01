@@ -142,7 +142,7 @@ For each confirmed task, use the configured task manager MCP with:
 
 ## Step 5: Save the Note
 
-Save to `~/Documents/vault/Reference/Braindumps/braindump-YYYY-MM-DD-HHmm.md`:
+Save to `~/Documents/vault/Reference/Braindumps/YYYY-MM-DD Braindump.md`:
 
 ```markdown
 ---
@@ -184,7 +184,7 @@ tags:
 
 Open the note in Obsidian:
 ```bash
-obsidian-cli open "braindump-YYYY-MM-DD-HHmm"
+obsidian-cli open "YYYY-MM-DD Braindump"
 ```
 
 ---

@@ -89,7 +89,7 @@ Offer 1–2 observations you noticed in their notes this week, then ask:
 
 ## Step 6: Generate the Check-In Note
 
-Save to `~/Documents/vault/Reference/Checkins/weekly-checkin-YYYY-MM-DD.md`
+Save to `~/Documents/vault/Reference/Checkins/YYYY-MM-DD Weekly Check-in.md`
 
 ```markdown
 ---
@@ -201,7 +201,7 @@ Still open from this week:
 
 Open the note in Obsidian:
 ```bash
-obsidian-cli open "weekly-checkin-YYYY-MM-DD"
+obsidian-cli open "YYYY-MM-DD Weekly Check-in"
 ```
 
 Tell the user:
